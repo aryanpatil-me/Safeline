@@ -42,9 +42,18 @@ https://github.com/aryanpatil-me/Safeline/blob/main/SafelinePrototype.ino
 --- 
 
 ## Visuals
+
+https://github.com/aryanpatil-me/Safeline/blob/main/userSignUp.jpg
+https://github.com/aryanpatil-me/Safeline/blob/main/userLogin.jpg
+https://github.com/aryanpatil-me/Safeline/blob/main/userHome.jpg
+https://github.com/aryanpatil-me/Safeline/blob/main/policeLogin.jpg
+https://github.com/aryanpatil-me/Safeline/blob/main/policeDashboard.jpg 
+
 --- 
 ## Demo Video
+
 https://github.com/aryanpatil-me/Safeline/blob/main/demoVideo.mp4
+
 ---
 
 ### Created by team Safeline
