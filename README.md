@@ -59,5 +59,5 @@ https://github.com/aryanpatil-me/Safeline/blob/main/demoVideo.mp4
 ---
 
 ### Created by team Safeline
-**contributor:**
+**contributors:**
 Aryan Patil, Ansh Gupta, Arptit Jaiswal, Rahul Suman
