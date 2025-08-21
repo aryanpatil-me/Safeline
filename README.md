@@ -38,7 +38,9 @@ A discreet, wearable safety device that instantly alerts authorities and loved o
 ---
 
 ## 🚀 Device Code
+
 https://github.com/aryanpatil-me/Safeline/blob/main/SafelinePrototype.ino
+
 --- 
 
 ## Visuals
