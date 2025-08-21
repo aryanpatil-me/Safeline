@@ -44,6 +44,7 @@ A discreet, wearable safety device that instantly alerts authorities and loved o
 ## Visuals
 --- 
 ## Demo Video
+https://github.com/aryanpatil-me/Safeline/blob/main/demoVideo.mp4
 ---
 
 ### Created by team Safeline
