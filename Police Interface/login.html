@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Police Login - Secure Access</title>
+    <!-- Updated to use separate login.css file --> 
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <!-- Updated login page with complete green background and specific form fields -->
+    <div id="loginPage" class="login-container">
+        <div class="login-wrapper">
+            <!-- Police Logo -->
+            <div class="header">
+                <div class="badge">
+                    <div class="badge-inner">
+                        <div class="badge-center">
+                            <span class="star">★</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- White Container -->
+            <div class="login-card">
+                <div class="card-header">
+                    <h2 class="card-title">Police Login</h2>
+                    <p class="card-description">Welcome back</p>
+                </div>
+                
+                <div class="card-content">
+                    <div id="errorMessage" class="error-message hidden"></div>
+                    
+                    <form class="login-form" id="loginForm">
+                        <!-- Added name input field -->
+                        <div class="form-group">
+                            <label for="officerName" class="form-label">Name</label>
+                            <input 
+                                type="text" 
+                                id="officerName" 
+                                name="officerName" 
+                                class="form-input" 
+                                placeholder="Enter your full name"
+                                required
+                            >
+                        </div>
+
+                        <!-- Added email input field -->
+                        <div class="form-group">
+                            <label for="email" class="form-label">Email</label>
+                            <input 
+                                type="email" 
+                                id="email" 
+                                name="email" 
+                                class="form-input" 
+                                placeholder="Enter your email address"
+                                required
+                            >
+                        </div>
+
+                        <div class="form-group">
+                            <label for="password" class="form-label">Password</label>
+                            <input 
+                                type="password" 
+                                id="password" 
+                                name="password" 
+                                class="form-input" 
+                                placeholder="Enter your password"
+                                required
+                            >
+                        </div>
+
+                        <!-- Added location/address input field -->
+                        <div class="form-group">
+                            <label for="location" class="form-label">Location/Address</label>
+                            <input 
+                                type="text" 
+                                id="location" 
+                                name="location" 
+                                class="form-input" 
+                                placeholder="Enter your current location"
+                                required
+                            >
+                        </div>
+
+                        <!-- Updated login button with green color and white text -->
+                        <button type="submit" class="login-button" id="loginButton">
+                            <span id="buttonText">Login</span>
+                            <div id="loadingSpinner" class="loading-spinner hidden">
+                                <div class="spinner">⟳</div>
+                                <span>Authenticating...</span>
+                            </div>
+                        </button>
+                    </form>
+
+                    <!-- Added forget password and sign in options -->
+                    <div class="auth-options">
+                        <a href="#" class="auth-link" id="forgotPassword">Forgot Password?</a>
+                        <a href="#" class="auth-link" id="signInOption">New Officer? Sign Up</a>
+                    </div>
+
+                    <!-- Added interactive text -->
+                    <div class="interactive-text">
+                        <p class="pulse-text">🔒 Secure Police Portal</p>
+                        <p class="fade-text">Protecting and Serving Our Community</p>
+                        <div class="typing-text">
+                            <span id="typingEffect">Ready to serve justice...</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Updated to use separate login.js file -->
+    <script src="login.js"></script>
+</body>
+</html>

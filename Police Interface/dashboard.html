@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Police Dashboard - Command Center</title>
+    <!-- Updated to use separate dashboard.css file -->
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+    <!-- Updated dashboard structure to match JavaScript expectations -->
+    <div class="dashboard-container">
+        <!-- Header -->
+        <div class="dashboard-header">
+            <div class="header-left">
+                <div class="badge-small">
+                    <span class="star">★</span>
+                </div>
+                <div class="header-info">
+                    <h1>Police Command Center</h1>
+                    <p>Badge: <span id="badgeDisplay">Loading...</span></p>
+                </div>
+            </div>
+            <button class="logout-button" id="logoutButton">Logout</button>
+        </div>
+
+        <!-- Navigation -->
+        <div class="dashboard-nav">
+            <button class="nav-tab active" data-tab="dashboard">Dashboard</button>
+            <button class="nav-tab" data-tab="alerts"><a href="index.html">Alerts</a></button>
+            <button class="nav-tab" data-tab="cases">Cases</button>
+            <button class="nav-tab" data-tab="map">Live Map</button>
+            <button class="nav-tab" data-tab="fir">FIR</button>
+        </div>
+
+        <!-- Main Content -->
+        <div class="dashboard-main">
+            <!-- Dashboard Tab -->
+            <div id="dashboard-tab" class="tab-content active">
+                <div class="tab-header">
+                    <h2>Dashboard Overview</h2>
+                </div>
+                
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <h3>Active Alerts</h3>
+                        <div class="stat-number" id="activeAlerts">0</div>
+                        <div class="stat-change">Real-time</div>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Open Cases</h3>
+                        <div class="stat-number" id="openCases">0</div>
+                        <div class="stat-change">Under investigation</div>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Officers on Duty</h3>
+                        <div class="stat-number" id="officersOnDuty">0</div>
+                        <div class="stat-change">Currently active</div>
+                    </div>
+                    <div class="stat-card">
+                        <h3>FIRs Today</h3>
+                        <div class="stat-number" id="firsToday">0</div>
+                        <div class="stat-change">Filed today</div>
+                    </div>
+                </div>
+
+                <div class="recent-activity">
+                    <h3>Recent Activity</h3>
+                    <div class="activity-list" id="activityList">
+                        <div class="activity-item">
+                            <div class="activity-icon low">i</div>
+                            <div class="activity-content">
+                                <p><strong>System:</strong> Dashboard initialized</p>
+                                <span class="activity-time">Just now</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Alerts Tab -->
+            <div id="alerts-tab" class="tab-content">
+                <div class="tab-header">
+                    <h2>Active Alerts</h2>
+                    <button class="primary-button" id="newAlertButton">New Alert</button>
+                </div>
+                <div class="alerts-list" id="alertsList">
+                    <!-- Alerts will be populated by JavaScript -->
+                </div>
+            </div>
+
+            <!-- Cases Tab -->
+            <div id="cases-tab" class="tab-content">
+                <div class="tab-header">
+                    <h2>Case Management</h2>
+                    <button class="primary-button" id="newCaseButton">New Case</button>
+                </div>
+                <div class="cases-list" id="casesList">
+                    <!-- Cases will be populated by JavaScript -->
+                </div>
+            </div>
+
+            <!-- Map Tab -->
+            <div id="map-tab" class="tab-content">
+                
+                <div class="tab-header">
+                    <h2>Live Map</h2>
+                    <div class="map-controls">
+                        <button class="map-control active" data-layer="officers">Officers</button>
+                        <button class="map-control" data-layer="incidents">Incidents</button>
+                        <button class="map-control" data-layer="patrol">All</button>
+                    </div>
+                </div>
+                <div class="map-container">
+                    <div class="map-placeholder">
+                    <!--  Map markers will be populated by JavaScript -->
+                    </div>
+                
+                </div>
+            </div>
+
+            <!-- FIR Tab -->
+            <div id="fir-tab" class="tab-content">
+                <div class="tab-header">
+                    <h2>FIR Management</h2>
+                    <button class="primary-button" id="newFirButton">New FIR</button>
+                </div>
+                <div class="fir-list" id="firList">
+                    <!-- FIRs will be populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Updated to use separate dashboard.js file -->
+    <script src="dashboard.js"></script>
+</body>
+</html> 

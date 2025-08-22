@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Simple Firebase Dashboard</title>
+  <style>
+    *{box-sizing:border-box}
+body{font-family:Arial,Helvetica,sans-serif;background:#0b1220;color:#e5e7eb;margin:0;padding:18px}
+header{margin-bottom:18px}
+h1{margin:0}
+.hint{color:#94a3b8;margin:4px 0 12px}
+main{display:grid;gap:14px;grid-template-columns:1fr;max-width:1100px}
+@media(min-width:900px){main{grid-template-columns:1fr 1fr}}
+.card{background:#0f172a;padding:14px;border-radius:10px;border:1px solid #1f2937}
+form input{display:block;width:100%;padding:8px;margin:8px 0;border-radius:6px;border:1px solid #222}
+button{padding:8px 12px;border-radius:8px;border:1px solid #1f2937;background:#0b1220;color:#e5e7eb;cursor:pointer}
+table{width:100%;border-collapse:collapse;margin-top:8px}
+thead th{background:#071025;padding:8px;text-align:left;color:#94a3b8;border-bottom:1px solid #1f2937}
+tbody td{padding:8px;border-bottom:1px dashed #17202a}
+.small{color:#94a3b8;font-size:13px}
+.mono{font-family:monospace;color:#94a3b8}
+  </style>
+  
+</head>
+<body>
+  <header>
+    <h1>Firebase Viewer / Add</h1>
+    <p class="hint">Shows users (with contacts) and alerts (username, lat, lng, audio)</p>
+  </header>
+
+  <main>
+    <section class="card">
+   
+
+    <section class="card">
+      <h2>Users</h2>
+      <table id="usersTable">
+        <thead><tr><th>Key / UID</th><th>Name</th><th>Email</th><th>Contacts</th><th>Created</th></tr></thead>
+        <tbody id="usersTbody"></tbody>
+      </table>
+    </section>
+
+    <section class="card">
+      <h2>Alerts</h2>
+      <table id="alertsTable">
+        <thead><tr><th>Key</th><th>Username</th><th>Latitude</th><th>Longitude</th><th>Audio</th><th>Map</th></tr></thead>
+        <tbody id="alertsTbody"></tbody>
+      </table>
+    </section>
+  </main>
+
+  <script type="module" >
+    // ====== 1) PASTE YOUR FIREBASE CONFIG HERE ======
+const firebaseConfig = {
+  apiKey: "AIzaSyDrvmtKo-H8J8YoEr245ldtn23H0chmP6U",
+  authDomain: "continue-8d736.firebaseapp.com",
+  databaseURL: "https://continue-8d736-default-rtdb.firebaseio.com",
+  projectId: "continue-8d736",
+  storageBucket: "continue-8d736.appspot.com",
+  messagingSenderId: "339897273702",
+  appId: "1:339897273702:web:3f014dab3dbbfd209a8ca7",
+  measurementId: "G-N9PGLGHLSJ",
+};
+
+// ====== 2) IMPORT SDK (v12 modular) ======
+import { initializeApp } from "https://www.gstatic.com/firebasejs/12.1.0/firebase-app.js";
+import { getAuth, signInAnonymously, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/12.1.0/firebase-auth.js";
+import { getDatabase, ref, push, set, onValue } from "https://www.gstatic.com/firebasejs/12.1.0/firebase-database.js";
+
+// ====== 3) INIT ======
+const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);
+const db = getDatabase(app);
+
+// ====== 4) DOM refs ======
+const userForm = document.getElementById("userForm");
+const alertForm = document.getElementById("alertForm");
+const usersTbody = document.getElementById("usersTbody");
+const alertsTbody = document.getElementById("alertsTbody");
+
+// ====== 5) AUTH (anonymous for testing) ======
+signInAnonymously(auth).catch(console.error);
+onAuthStateChanged(auth, (user) => {
+  if (user) startListeners();
+});
+
+// ====== 6) HELPERS ======
+function htmlEscape(s=''){ return String(s).replace(/[&<>"']/g, c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])); }
+function contactPills(obj){ 
+  if(!obj) return '<span class="small">None</span>';
+  const list = Array.isArray(obj) ? obj : Object.values(obj);
+  return list.map(c=>`<div class="small">${htmlEscape(c?.name||'')} • ${htmlEscape(c?.phone||'')}</div>`).join('');
+}
+function mapLink(lat,lng){ 
+  if(lat==null || lng==null || lat==="" || lng==="") return '<span class="small">—</span>';
+  return `<a target="_blank" rel="noopener" href="https://www.google.com/maps?q=${lat},${lng}">Open</a>`;
+}
+
+// ====== 7) FORMS: Add User ======
+userForm.addEventListener("submit", async (ev) => {
+  ev.preventDefault();
+  const name = document.getElementById("userName").value.trim();
+  const email = document.getElementById("userEmail").value.trim();
+  const cName = document.getElementById("contactName").value.trim();
+  const cPhone = document.getElementById("contactPhone").value.trim();
+  const cRelation = document.getElementById("contactRelation").value.trim();
+
+  // Build contacts object like your screenshot (0:{...})
+  const contacts = {};
+  if (cName || cPhone || cRelation) {
+    contacts[0] = { name: cName || "", phone: cPhone || "", relation: cRelation || "" };
+  }
+
+  const userObj = {
+    name: name || "",
+    email: email || "",
+    contacts: contacts,
+    createdAt: Date.now()
+  };
+
+  try {
+    const newRef = push(ref(db, "users"));
+    await set(newRef, userObj);
+    userForm.reset();
+    alert("User added.");
+  } catch (err) {
+    console.error(err);
+    alert("Write failed: " + err.message);
+  }
+});
+
+// ====== 8) FORMS: Add Alert ======
+alertForm.addEventListener("submit", async (ev) => {
+  ev.preventDefault();
+  const username = document.getElementById("alertUsername").value.trim();
+  const lat = document.getElementById("alertLat").value.trim();
+  const lng = document.getElementById("alertLng").value.trim();
+  const audio = document.getElementById("alertAudio").value.trim();
+
+  const alertObj = {
+    username: username || "",
+    latitude: lat === "" ? null : Number(lat),
+    longitude: lng === "" ? null : Number(lng),
+    audio: audio || ""
+  };
+
+  try {
+    const newRef = push(ref(db, "alert/data"));
+    await set(newRef, alertObj);
+    alertForm.reset();
+    alert("Alert added.");
+  } catch (err) {
+    console.error(err);
+    alert("Write failed: " + err.message);
+  }
+});
+
+// ====== 9) REALTIME LISTENERS ======
+function startListeners(){
+  onValue(ref(db, "users"), (snap) => {
+    const data = snap.val() || {};
+    renderUsers(data);
+  });
+
+  onValue(ref(db, "alert/data"), (snap) => {
+    const data = snap.val() || {};
+    renderAlerts(data);
+  });
+}
+
+// ====== 10) RENDER ======
+function renderUsers(usersObj){
+  const rows = [];
+  const entries = Object.entries(usersObj || {});
+  entries.sort((a,b)=>a[0].localeCompare(b[0]));
+  for(const [key, u] of entries){
+    rows.push(`<tr>
+      <td class="mono">${htmlEscape(key)}</td>
+      <td>${htmlEscape(u?.name ?? '')}</td>
+      <td>${htmlEscape(u?.email ?? '')}</td>
+      <td>${contactPills(u?.contacts)}</td>
+      <td class="small">${u?.createdAt ? new Date(u.createdAt).toLocaleString() : '—'}</td>
+    </tr>`);
+  }
+  usersTbody.innerHTML = rows.join("") || `<tr><td colspan="5" class="small">No users</td></tr>`;
+}
+
+function renderAlerts(alertsObj){
+  const rows = [];
+  const entries = Object.entries(alertsObj || {});
+  entries.sort((a,b)=>a[0].localeCompare(b[0]));
+  for(const [key, a] of entries){
+    rows.push(`<tr>
+      <td class="mono">${htmlEscape(key)}</td>
+      <td>${htmlEscape(a?.username ?? '')}</td>
+      <td class="mono">${a?.latitude ?? '—'}</td>
+      <td class="mono">${a?.longitude ?? '—'}</td>
+      <td class="small">${a?.audio ? htmlEscape(a.audio) : '—'}</td>
+      <td>${mapLink(a?.latitude, a?.longitude)}</td>
+    </tr>`);
+  }
+  alertsTbody.innerHTML = rows.join("") || `<tr><td colspan="6" class="small">No alerts</td></tr>`;
+}
+  </script>
+</body>
+</html>
