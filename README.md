@@ -45,12 +45,12 @@ https://github.com/aryanpatil-me/Safeline/blob/main/SafelinePrototype.ino
 
 ## Visuals
 
-https://github.com/aryanpatil-me/Safeline/blob/main/Visuals/policeDashboard.jpg
-https://github.com/aryanpatil-me/Safeline/blob/main/Visuals/policeLogin.jpg
-https://github.com/aryanpatil-me/Safeline/blob/main/Visuals/userHome.jpg
-https://github.com/aryanpatil-me/Safeline/blob/main/Visuals/userLogin.jpg
-https://github.com/aryanpatil-me/Safeline/blob/main/Visuals/userSignUp.jpg
-
+- https://github.com/aryanpatil-me/Safeline/blob/main/Visuals/policeDashboard.jpg\
+- https://github.com/aryanpatil-me/Safeline/blob/main/Visuals/policeLogin.jpg
+- https://github.com/aryanpatil-me/Safeline/blob/main/Visuals/userHome.jpg
+- https://github.com/aryanpatil-me/Safeline/blob/main/Visuals/userLogin.jpg
+- https://github.com/aryanpatil-me/Safeline/blob/main/Visuals/userSignUp.jpg
+  
 --- 
 ## Demo Video
 
