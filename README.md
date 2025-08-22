@@ -54,7 +54,7 @@ https://github.com/aryanpatil-me/Safeline/blob/main/policeDashboard.jpg
 --- 
 ## Demo Video
 
-https://github.com/aryanpatil-me/Safeline/blob/main/demoVideo.mp4
+[https://github.com/aryanpatil-me/Safeline/blob/main/demoVideo.mp4](https://github.com/aryanpatil-me/Safeline/blob/main/Demo%20video/demoVideo.mp4)
 
 ---
 
