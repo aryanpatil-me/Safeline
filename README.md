@@ -1,3 +1,5 @@
+# Team Name : Safeline
+
 # 🚨 Wearable IoT Safety Device
 
 A discreet, wearable safety device that instantly alerts authorities and loved ones in case of emergencies. Real-time tracking, evidence collection, and analytics ensure faster response and enhanced personal safety.  
