@@ -1,5 +1,13 @@
 # Team Name : Safeline
-
+---
+## Team Details: 
+- Team Name : Safeline
+- Team Members :
+- - Aryan Praful Patil
+  - Arpit Jiaswal
+  - Ansh Kumar Gupta
+  - Rahul Suman
+---
 ## Problem statement : 
 
 Build a wearable (simulated prototype) with panic button, GPS, and audio recording that sends real-time alerts to guardians/police with location and context.
@@ -33,6 +41,8 @@ A discreet, wearable safety device that instantly alerts authorities and loved o
 - **Sensors:** GPS, accelerometer, button for SOS  
 
 ---
+## Installation & Usage  
+
 
 ## ⚙️ How It Works
 
@@ -79,7 +89,6 @@ https://github.com/aryanpatil-me/Safeline/blob/main/SafelinePrototype.ino
 [https://github.com/aryanpatil-me/Safeline/blob/main/demoVideo.mp4](https://github.com/aryanpatil-me/Safeline/blob/main/Demo%20video/demoVideo.mp4)
 
 ---
+## Future Enhancements  
 
-### Created by team Safeline
-**contributors:**
-Aryan Praful Patil, Ansh Kumar Gupta, Arpit Jaiswal, Rahul Suman
+
