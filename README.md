@@ -1,5 +1,8 @@
 # Team Name : Safeline
 
+## Problem statement : 
+Build a wearable (simulated prototype) with panic button, GPS, and audio recording that sends real-time alerts to guardians/police with location and context.
+
 # 🚨 Wearable IoT Safety Device
 
 A discreet, wearable safety device that instantly alerts authorities and loved ones in case of emergencies. Real-time tracking, evidence collection, and analytics ensure faster response and enhanced personal safety.  
@@ -8,7 +11,7 @@ A discreet, wearable safety device that instantly alerts authorities and loved o
 
 ## 🔹 Features
 
-- **Instant SOS Alert:** One press triggers an immediate alert.  
+- **Instant SOS Alert:** Simultaneous twice press triggers an immediate alert.  
 - **GPS & User Info:** Sent directly to Police Dashboard for faster response.  
 - **Family Notifications:** SMS & WhatsApp alerts via Twilio.  
 - **Audio Recording:** Starts immediately to capture proof.  
@@ -20,10 +23,10 @@ A discreet, wearable safety device that instantly alerts authorities and loved o
 
 ## 🛠 Tech Stack
 
-- **Frontend:** [Your frontend framework/app]  
+- **Frontend:** UI for user and police dashboard. 
 - **Backend:** Firebase (Realtime Database, Firestore, Cloud Functions)  
 - **Messaging:** Twilio (SMS & WhatsApp)  
-- **IoT Device:** [Your microcontroller/wearable tech]  
+- **IoT Device:** ESP 32
 - **Sensors:** GPS, accelerometer, button for SOS  
 
 ---
@@ -31,14 +34,14 @@ A discreet, wearable safety device that instantly alerts authorities and loved o
 ## ⚙️ How It Works
 
 1. **Activation:** User presses the wearable device.  
-2. **SOS Alert:** Sends location & user info to Police Dashboard.  
+2. **SOS Alert:** Sends location, captured audio & user info to Police Dashboard.  
 3. **Notifications:** Family receives SMS/WhatsApp alert.  
 4. **Audio Recording:** Automatically captures evidence.  
 5. **Monitoring:** Police response is tracked in real-time.  
 6. **Analysis:** Monthly heatmaps highlight unsafe zones.  
 
 ---
-## Hardware Used
+## Hardware Used (for prototype)
 - Esp32
 - GPS module (NEO 6M)
 - Microphone module (Ky 037)
