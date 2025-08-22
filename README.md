@@ -1,4 +1,4 @@
-# Team Name : Safeline
+# Safeline
 ---
 ## Team Details: 
 - Team Name : Safeline
