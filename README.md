@@ -34,13 +34,18 @@ A discreet, wearable safety device that instantly alerts authorities and loved o
 
 ## 🛠 Tech Stack
 
-- **Frontend:** UI for user and police dashboard. 
+- **Frontend:** HTML, CSS, JavaScript
 - **Backend:** Firebase (Realtime Database, Firestore, Cloud Functions)  
 - **Messaging:** Twilio (SMS & WhatsApp)  
 - **IoT Device:** ESP 32
 - **Sensors:** GPS, accelerometer, button for SOS  
 
 --- 
+## Installation & Usage 
+- Insatll Arduino Ide to run arduino code.
+- Login google firebase
+- Install VS code to run all frontend related files.
+---
 
 ## ⚙️ How It Works
 
