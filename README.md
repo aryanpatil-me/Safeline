@@ -36,6 +36,14 @@ A discreet, wearable safety device that instantly alerts authorities and loved o
 6. **Analysis:** Monthly heatmaps highlight unsafe zones.  
 
 ---
+## Hardware Used
+- Esp32
+- GPS module (NEO 6M)
+- Microphone module (Ky 037)
+- LEDs (red, green)
+- Push button
+- Resistors (2 x 220 Ω and 1 x 10 kΩ)
+- Breadboard and jumper wires
 
 ## 🚀 Device Code
 
