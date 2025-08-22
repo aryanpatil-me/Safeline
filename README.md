@@ -79,16 +79,16 @@ https://github.com/aryanpatil-me/Safeline/blob/main/SafelinePrototype.ino
 
 ## Visuals
 
-- https://github.com/aryanpatil-me/Safeline/blob/main/Visuals/policeDashboard.jpg
-- https://github.com/aryanpatil-me/Safeline/blob/main/Visuals/policeLogin.jpg
-- https://github.com/aryanpatil-me/Safeline/blob/main/Visuals/userHome.jpg
-- https://github.com/aryanpatil-me/Safeline/blob/main/Visuals/userLogin.jpg
-- https://github.com/aryanpatil-me/Safeline/blob/main/Visuals/userSignUp.jpg
+- [Police Dashboard](https://github.com/aryanpatil-me/Safeline/blob/main/Visuals/policeDashboard.jpg)
+- [Police Login Page](https://github.com/aryanpatil-me/Safeline/blob/main/Visuals/policeLogin.jpg)
+- [User Home Page](https://github.com/aryanpatil-me/Safeline/blob/main/Visuals/userHome.jpg)
+- [User Login Page](https://github.com/aryanpatil-me/Safeline/blob/main/Visuals/userLogin.jpg)
+- [User Sign-Up Page](https://github.com/aryanpatil-me/Safeline/blob/main/Visuals/userSignUp.jpg)
 
 --- 
 ## Demo Video
 
-[https://github.com/aryanpatil-me/Safeline/blob/main/demoVideo.mp4](https://github.com/aryanpatil-me/Safeline/blob/main/Demo%20video/demoVideo.mp4)
+[Demo Video](https://github.com/aryanpatil-me/Safeline/blob/main/Demo%20video/demoVideo.mp4)
 
 - If video will not open please click 'view raw'.
 
