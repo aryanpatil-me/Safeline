@@ -79,4 +79,4 @@ https://github.com/aryanpatil-me/Safeline/blob/main/SafelinePrototype.ino
 
 ### Created by team Safeline
 **contributors:**
-Aryan Patil, Ansh Gupta, Arptit Jaiswal, Rahul Suman
+Aryan Praful Patil, Ansh Kumar Gupta, Arpit Jaiswal, Rahul Suman
