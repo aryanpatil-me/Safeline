@@ -40,9 +40,7 @@ A discreet, wearable safety device that instantly alerts authorities and loved o
 - **IoT Device:** ESP 32
 - **Sensors:** GPS, accelerometer, button for SOS  
 
----
-## Installation & Usage  
-
+--- 
 
 ## ⚙️ How It Works
 
@@ -90,5 +88,8 @@ https://github.com/aryanpatil-me/Safeline/blob/main/SafelinePrototype.ino
 
 ---
 ## Future Enhancements  
+- Integration of ML model for alert classification.
+- Addition of GSM module
+- Hot zone mapping
 
 
