@@ -43,6 +43,12 @@ https://github.com/aryanpatil-me/Safeline/blob/main/SafelinePrototype.ino
 
 --- 
 
+## Circuit Diagram
+
+<img width="966" height="733" alt="circuit diagram" src="https://github.com/user-attachments/assets/f0750c19-0b1c-4a62-84a5-1c401e6ad33e" />
+
+---
+
 ## Visuals
 
 - https://github.com/aryanpatil-me/Safeline/blob/main/Visuals/policeDashboard.jpg\
