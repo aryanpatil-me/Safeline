@@ -2,6 +2,7 @@
 
 ## Problem statement : 
 Build a wearable (simulated prototype) with panic button, GPS, and audio recording that sends real-time alerts to guardians/police with location and context.
+---
 
 # 🚨 Wearable IoT Safety Device
 
