@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Safeline - Login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="login-page"> 
+    <div class="login-container">
+        <div class="login-card">
+            <!-- Logo and Branding -->
+            <div class="logo-section">
+                <div class="logo">
+                    <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="30" cy="30" r="28" fill="#4CAF50" stroke="#2E7D32" stroke-width="4"/>
+                        <path d="M30 10L40 20H35V35C35 38.866 31.866 42 28 42H32C28.134 42 25 38.866 25 35V20H20L30 10Z" fill="white"/>
+                        <circle cx="30" cy="47" r="3" fill="white"/>
+                    </svg>
+                </div>
+                <h1 class="brand-name">Safeline</h1>
+                <p class="tagline">Your Safety, Our Priority</p>
+            </div>
+]
+         
+            <!-- Login Form -->
+            <form class="login-form" id="loginForm">
+                <!-- Name Input -->
+                <div class="input-group">
+                    <label for="name">Full Name</label> 
+                    <input type="text" id="name" name="name" required>
+                </div>  
+
+                <!-- Photo Upload -->
+                <div class="input-group">
+                    <label for="photo">Profile Photo</label>
+                    <div class="photo-upload">
+                        <input type="file" id="photo" name="photo" accept="image/*">
+                        <div class="photo-preview" id="photoPreview">
+                            <span>Click to upload photo</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Emergency Contacts -->
+                <div class="input-group">
+                    <label>Emergency Contacts</label>
+                    <div class="emergency-contacts" id="emergencyContacts">
+                        <div class="contact-item">
+                            <input type="text" placeholder="Contact Name" name="contactName[]" required>
+                            <input type="tel" placeholder="Phone Number" name="contactPhone[]" required>
+                            <select name="contactRelation[]" required>
+                                <option value="">Relationship</option>
+                                <option value="mother">Mother</option>
+                                <option value="father">Father</option>
+                                <option value="sister">Sister</option>
+                                <option value="brother">Brother</option>
+                                <option value="friend">Friend</option>
+                                <option value="spouse">Spouse</option>
+                                <option value="other">Other</option>
+                            </select>
+                            <button type="button" class="remove-contact" onclick="removeContact(this)">×</button>
+                        </div>
+                    </div>
+                    <button type="button" class="add-contact" onclick="addContact()">+ Add Another Contact</button>
+                </div>
+
+                <!-- Email Input -->
+                <div class="input-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <!-- Password Input -->
+                <div class="input-group">
+                    <label for="password">Password</label>
+                    <div class="password-input">
+                        <input type="password" id="password" name="password" required>
+                        <button type="button" class="toggle-password" onclick="togglePassword()">👁️</button>
+                    </div> 
+                </div>
+
+                <!-- Terms and Conditions -->
+                <div class="checkbox-group">
+                    <input type="checkbox" id="terms" name="terms" required>
+                    <label for="terms">I agree to the <a href="#" class="terms-link">Terms and Conditions</a></label>
+                </div>
+
+                <!-- Login Button -->
+                <button type="submit" id="submitBtn" class="login-btn">Sign Up</button>
+
+                <!-- Additional Options -->
+                <div class="form-options">
+                    <a href="#" class="forgot-password">Forgot Password?</a>
+                    
+                    <p>Already have an account? <a href="login.html">Login here</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+
+    <script src="signup.js"  type="module"></script>
+
+</body>
+</html>
+
+

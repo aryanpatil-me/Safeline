@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Safeline - Home</title>
+   
+    <link rel="stylesheet" href="home-style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Left Navigation Bar -->
+    <nav class="sidebar">
+        <div class="nav-header">
+            <div class="logo">
+                <i class="fas fa-shield-alt"></i>
+            </div>
+            <h2 class="company-name">Safeline</h2>
+            <p class="tagline">Your Safety, Our Priority</p>
+        </div>
+        
+        <ul class="nav-menu">
+            <li class="nav-item active">
+                <a href="#home" class="nav-link">
+                    <i class="fas fa-home"></i>
+                    <span>Home</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#map" class="nav-link">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Map</span>
+                    
+                </a>
+                
+                <hr>
+                <div id="map2"></div>
+    
+    
+            </li>
+            <li class="nav-item">
+                <a href="#blog" class="nav-link">
+                    <i class="fas fa-blog"></i>
+                    <span>Blog</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#about" class="nav-link">
+                    <i class="fas fa-info-circle"></i>
+                    <span>About Us</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#settings" class="nav-link">
+                    <i class="fas fa-cog"></i>
+                    <span>Settings</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- User Info Header -->
+        <header class="user-header">
+            <div class="user-info">
+                <img src="" alt="User Profile" class="user-avatar" id="userAvatar">
+                <div class="user-details">
+                    <h3 id="userName">Welcome back!</h3>
+                    <p class="user-status">Stay safe </p>
+                </div>
+            </div>
+        </header> 
+
+        <!-- Home Section -->
+        <section id="home" class="content-section active">
+            <div class="greeting-container">
+                <h1 class="greeting">Good Morning! Stay Safe Today</h1>
+                <button class="sos-button" id="sosButton">
+                    <i class="fas fa-exclamation-triangle"></i>
+                    SOS EMERGENCY
+                </button>
+            </div>
+        </section>
+
+        <!-- Map Section -->
+        <section id="map" class="content-section">
+            <div class="info-container">
+                <div class="info-left">
+                    <div class="map-container">
+                        <img src="11.png" alt="">
+                            <i class="fas fa-map-marked-alt"></i>
+                            <p>Live location map</p>
+                            <div class="location-dot"></div>
+                        
+                    </div>
+                </div>
+                <div class="info-right">
+                    <h2>MAP</h2>
+                    <p class="info-text">
+                        Our interactive map shows your live location and highlights danger zones in your area. 
+                        Stay informed about safe routes and avoid potentially risky areas. The map updates in 
+                        real-time to provide you with the most current safety information.
+                    </p>
+                    <ul class="feature-list">
+                        <li><i class="fas fa-check"></i> Live location tracking</li>
+                        <li><i class="fas fa-check"></i> Danger zone alerts</li>
+                        <li><i class="fas fa-check"></i> Safe route suggestions</li>
+                        <li><i class="fas fa-check"></i> Real-time updates</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Blog Section -->
+        <section id="blog" class="content-section">
+            <div class="info-container">
+                <div class="info-left">
+                    <img src="OIP.png" alt="Safety Blog" class="section-image">
+                </div>
+                <div class="info-right">
+                    <h2>BLOG</h2>
+                    <p class="info-text">
+                        Stay informed with our latest safety tips, self-defense techniques, and awareness articles. 
+                        Our blog features expert advice, real-life stories, and practical guidance to help you 
+                        stay safe in various situations.
+                    </p>
+                    <div class="blog-preview">
+                        <h4>Latest Articles:</h4>
+                        <ul class="blog-list">
+                            <li><a href="#">10 Essential Safety Tips for Women</a></li>
+                            <li><a href="#">How to Stay Safe While Traveling Alone</a></li>
+                            <li><a href="#">Emergency Preparedness Guide</a></li>
+                            <li><a href="#">Building Confidence Through Self-Defense</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Us Section -->
+        <section id="about" class="content-section">
+            <div class="info-container">
+                <div class="info-left">
+                    <img src="About.png" alt="About Safeline" class="section-image">
+                </div>
+                <div class="info-right">
+                    <h2>ABOUT US</h2>
+                    <p class="info-text">
+                        Safeline is dedicated to empowering women with cutting-edge safety technology. Founded with 
+                        the mission to create a safer world for women everywhere, we provide innovative solutions 
+                        that combine technology with community support.
+                    </p>
+                    <div class="company-stats">
+                        <div class="stat">
+                            <h4>3,000+</h4>
+                            <p>Women Protected</p>
+                        </div>
+                        <div class="stat">
+                            <h4>24/7</h4>
+                            <p>Emergency Support</p>
+                        </div>
+                        <div class="stat">
+                            <h4>100+</h4>
+                            <p>Cities Covered</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Settings Section -->
+        <section id="settings" class="content-section">
+            <div class="settings-container">
+                <h2>Settings</h2>
+                <div class="settings-form">
+                    <div class="form-group">
+                        <label for="settingsName">Name</label>
+                        <input type="text" id="settingsName" class="form-input">
+                    </div>
+                    <div class="form-group">
+                        <label for="settingsEmail">Email</label>
+                        <input type="email" id="settingsEmail" class="form-input">
+                    </div>
+                    <div class="form-group">
+                        <label for="settingsPhoto">Profile Photo</label>
+                        <input type="file" id="settingsPhoto" class="form-input" accept="image/*">
+                    </div>
+                    <div class="form-group">
+                        <label>Emergency Contacts</label>
+                        <div id="emergencyContactsList" class="contacts-list"></div>
+                        <button type="button" class="add-contact-btn" id="addContactBtn">
+                            <i class="fas fa-plus"></i> Add Contact
+                        </button>
+                    </div>
+                    <button class="save-settings-btn" id="saveSettingsBtn">Save Changes</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="home-script.js"></script>
+</body>
+</html>
