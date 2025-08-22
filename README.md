@@ -35,8 +35,7 @@ A discreet, wearable safety device that instantly alerts authorities and loved o
 ## 🛠 Tech Stack
 
 - **Frontend:** HTML, CSS, JavaScript
-- **Backend:** Firebase (Realtime Database, Firestore, Cloud Functions)  
-- **Messaging:** Twilio (SMS & WhatsApp)  
+- **Backend:** Firebase (Realtime Database, Firestore)  
 - **IoT Device:** ESP 32
 - **Sensors:** GPS, accelerometer, button for SOS  
 
@@ -91,9 +90,12 @@ https://github.com/aryanpatil-me/Safeline/blob/main/SafelinePrototype.ino
 
 [https://github.com/aryanpatil-me/Safeline/blob/main/demoVideo.mp4](https://github.com/aryanpatil-me/Safeline/blob/main/Demo%20video/demoVideo.mp4)
 
+- If video will not open please click 'view raw'.
+
 ---
 ## Future Enhancements  
 - Integration of ML model for alert classification.
+- Addition of Twilio (SMS & WhatsApp) messaging services.
 - Addition of GSM module
 - Hot zone mapping
 
